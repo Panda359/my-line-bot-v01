@@ -1,17 +1,3 @@
-import LINETCR
-from LINETCR.lib.curve.ttypes import *
-from datetime import datetime
-import time, random, sys, ast, re, os, io, json, subprocess, threading, string, codecs, requests, tweepy, ctypes, urllib, urllib2, wikipedia, goslate
-import timeit
-from bs4 import BeautifulSoup
-from urllib import urlopen
-from io import StringIO
-from threading import Thread
-from gtts import gTTS
-from googletrans import Translator
-
-import six
-
 from flask import Flask, request, abort
 from linebot import (LineBotApi, WebhookHandler)
 from linebot.exceptions import (InvalidSignatureError)
