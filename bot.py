@@ -1,10 +1,3 @@
-from line.linepy import *
-from gtts import gTTS
-from bs4 import BeautifulSoup
-from datetime import datetime
-from googletrans import Translator
-import ast, codecs, json, os, pytz, re, random, requests, sys, time, urllib.parse
-
 from flask import Flask, request, abort
 from linebot import (LineBotApi, WebhookHandler)
 from linebot.exceptions import (InvalidSignatureError)
