@@ -10,7 +10,7 @@ app = Flask(__name__)
 #cl = LINE('fSTr2G4/t3EQ2vocVfa7xSRDUWDJVkKtPYFOTfQOhSE+H4XS9iir2Scv/jjqNAl4OC3fZlgTSHPvEAv0SC49WkhLza2J3qWAWJ5BotlBD1brgoCWAjJT4KGZDNeABUBMHgcn68Ofb+t7srQviEYjOgdB04t89/1O/w1cDnyilFU=')
 
 line_bot_api = LineBotApi('fSTr2G4/t3EQ2vocVfa7xSRDUWDJVkKtPYFOTfQOhSE+H4XS9iir2Scv/jjqNAl4OC3fZlgTSHPvEAv0SC49WkhLza2J3qWAWJ5BotlBD1brgoCWAjJT4KGZDNeABUBMHgcn68Ofb+t7srQviEYjOgdB04t89/1O/w1cDnyilFU=')
-#handler = WebhookHandler('91aba13ad024feeb462ae8ae2a72a7ba')
+handler = WebhookHandler('91aba13ad024feeb462ae8ae2a72a7ba')
 
 
 
@@ -29,11 +29,11 @@ def webhook():
     body = request.get_data(as_text=True)
     app.logger.info("Request body: " + body)
 
-   # handle webhook body
-   # try:
-   #     handler.handle(body, signature)
-   # except InvalidSignatureError:
-   #     abort(400)
+    handle webhook body
+    try:
+        handler.handle(body, signature)
+    except InvalidSignatureError:
+        abort(400)
 
     return 'OK'
     
