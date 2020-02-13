@@ -10,6 +10,16 @@ app = Flask(__name__)
 line_bot_api = LineBotApi('fSTr2G4/t3EQ2vocVfa7xSRDUWDJVkKtPYFOTfQOhSE+H4XS9iir2Scv/jjqNAl4OC3fZlgTSHPvEAv0SC49WkhLza2J3qWAWJ5BotlBD1brgoCWAjJT4KGZDNeABUBMHgcn68Ofb+t7srQviEYjOgdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('91aba13ad024feeb462ae8ae2a72a7ba')
 
+
+cl = LINE("fSTr2G4/t3EQ2vocVfa7xSRDUWDJVkKtPYFOTfQOhSE+H4XS9iir2Scv/jjqNAl4OC3fZlgTSHPvEAv0SC49WkhLza2J3qWAWJ5BotlBD1brgoCWAjJT4KGZDNeABUBMHgcn68Ofb+t7srQviEYjOgdB04t89/1O/w1cDnyilFU=")
+#cl = LINE("TOKENMU")
+#cl = LINE("Email","Password")
+#cl = LINE()
+cl.log("Auth Token : " + str(cl.authToken))
+channelToken = cl.getChannelResult()
+cl.log("Channel Token : " + str(channelToken))
+
+
 @app.route("/")
 def hello():
     return "Hello World!"
